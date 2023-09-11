@@ -1,0 +1,43 @@
+POST  http://localhost:8000/auth/login 
+Content-Type: application/json
+
+{
+    "email": "name@example.com",
+    "password": "password"
+}
+
+###
+POST http://localhost:8000/auth/signup
+Content-Type: application/json
+
+{
+    "name": "don",
+    "email": "name@example.com",
+    "password": "password"
+}
+
+###
+GET http://localhost:8000/auth
+
+###
+GET http://localhost:8000/emp
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjMyNTJjNjM5ZmVjZWU2NzA4ZjdlMiIsImlhdCI6MTY5MzY2MDUwNywiZXhwIjoxNjkzNjYxNDA3fQ.cHrfVv0jmmcf-Ysdt_g4drlYH2EL6-Yt2BPeayEEDBw
+
+###
+GET http://localhost:8000/emp/getstudent/64f3252c639fecee6708f7e2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjMyNTJjNjM5ZmVjZWU2NzA4ZjdlMiIsImlhdCI6MTY5MzY2MTkzMCwiZXhwIjoxNjkzNjYyODMwfQ.EXGRW7MrbXMMo5vWzkQ8vuVO4TgAukyXrwJAFhS0sBM
+
+###
+POST http://localhost:8000/emp/addstudent/64f3252c639fecee6708f7e2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZjMyNTJjNjM5ZmVjZWU2NzA4ZjdlMiIsImlhdCI6MTY5MzY2MTkzMCwiZXhwIjoxNjkzNjYyODMwfQ.EXGRW7MrbXMMo5vWzkQ8vuVO4TgAukyXrwJAFhS0sBM
+Content-Type: application/json
+
+{
+    "batch": "2022 Dec",
+    "name": "test",
+    "email": "test@email.com",
+    "collage": "Tctk",
+    "dsa": "440",
+    "react": "450",
+    "webdev": "445"
+}
